@@ -14,7 +14,7 @@ import { ThemeProvider } from "./context/ThemeContext";
 function App() {
   return (
     <ThemeProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/AyushMithra1.0">
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
