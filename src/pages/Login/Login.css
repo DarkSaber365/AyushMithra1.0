@@ -1,5 +1,5 @@
 /* ==========================================
-          PILLCARE PREMIUM LOGIN V5
+   AYUSHMITHRA PREMIUM LOGIN
 ========================================== */
 
 * {
@@ -9,230 +9,350 @@
   font-family: "Poppins", sans-serif;
 }
 
+
+/* ==========================================
+   LOGIN PAGE
+========================================== */
+
 .login-page {
   width: 100%;
   height: 100vh;
+
   overflow: hidden;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   position: relative;
-  background: linear-gradient(180deg,#11A8B9 0%,#16B5B5 45%,#E6FAF7 100%);
+
+  background:
+    linear-gradient(
+      180deg,
+      #11A8B9 0%,
+      #16B5B5 45%,
+      #E6FAF7 100%
+    );
 }
 
-/* Background Glow */
-.login-page::before{
-    content:"";
-    position:absolute;
 
-    bottom:-320px;
-    left:50%;
-    transform:translateX(-50%);
+/* ==========================================
+   BACKGROUND GLOW
+========================================== */
 
-    width:950px;
-    height:950px;
+.login-page::before {
+  content: "";
 
-    border-radius:50%;
+  position: absolute;
 
-    background:radial-gradient(
-        circle,
-        rgba(255,255,255,.95) 0%,
-        rgba(255,255,255,.55) 40%,
-        rgba(255,255,255,0) 75%
+  bottom: -320px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 950px;
+  height: 950px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,.95) 0%,
+      rgba(255,255,255,.55) 40%,
+      rgba(255,255,255,0) 75%
     );
 
-    z-index:0;
-}
-
-/* Floating Medical Bubbles */
-.bubble{
-    position:absolute;
-
-    width:92px;
-    height:92px;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.18);
-
-    backdrop-filter:blur(18px);
-
-    border:1px solid rgba(255,255,255,.25);
-
-    box-shadow:
-        inset 0 0 18px rgba(255,255,255,.15),
-        0 12px 30px rgba(0,0,0,.08);
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    color:white;
-
-    animation:float 7s ease-in-out infinite;
-    z-index:2;
-}
-
-.bubble1{
-    top:90px;
-    left:20%;
-}
-
-.bubble2{
-    top:260px;
-    left:6%;
-}
-
-.bubble3{
-    top:220px;
-    right:7%;
-}
-
-.bubble4{
-    bottom:120px;
-    right:18%;
-}
-
-@keyframes float {
-  0%,100% { transform: translateY(0px); }
-  50% { transform: translateY(-14px); }
-}
-
-/* White Medical Lines */
-.login-page::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 220px;
-  bottom: 50px;
-  left: 0;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='220'%3E%3Cpath d='M0 150 L120 150 L160 110 L220 190 L300 90 L380 150 L520 150 L560 120 L620 200 L700 60 L760 150 L900 150 L980 110 L1040 190 L1120 80 L1180 150 L1320 150 L1400 120 L1480 180 L1600 100' stroke='white' stroke-width='3' fill='none' stroke-opacity='0.5'/%3E%3C/svg%3E") center/cover no-repeat;
-  opacity: .6;
   z-index: 0;
 }
 
-/* ========================= CARD ========================= */
+
+/* ==========================================
+   FLOATING MEDICAL BUBBLES
+========================================== */
+
+.bubble {
+  position: absolute;
+
+  width: 92px;
+  height: 92px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,255,255,.18);
+
+  backdrop-filter: blur(18px);
+
+  border:
+    1px solid rgba(255,255,255,.25);
+
+  box-shadow:
+    inset 0 0 18px rgba(255,255,255,.15),
+    0 12px 30px rgba(0,0,0,.08);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+
+  animation:
+    float 7s ease-in-out infinite;
+
+  z-index: 2;
+}
+
+.bubble1 {
+  top: 90px;
+  left: 20%;
+}
+
+.bubble2 {
+  top: 260px;
+  left: 6%;
+}
+
+.bubble3 {
+  top: 220px;
+  right: 7%;
+}
+
+.bubble4 {
+  bottom: 120px;
+  right: 18%;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-14px);
+  }
+
+}
+
+
+/* ==========================================
+   WHITE MEDICAL LINES
+========================================== */
+
+.login-page::after {
+  content: "";
+
+  position: absolute;
+
+  width: 100%;
+  height: 220px;
+
+  bottom: 50px;
+  left: 0;
+
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='220'%3E%3Cpath d='M0 150 L120 150 L160 110 L220 190 L300 90 L380 150 L520 150 L560 120 L620 200 L700 60 L760 150 L900 150 L980 110 L1040 190 L1120 80 L1180 150 L1320 150 L1400 120 L1480 180 L1600 100' stroke='white' stroke-width='3' fill='none' stroke-opacity='0.5'/%3E%3C/svg%3E")
+    center / cover no-repeat;
+
+  opacity: .6;
+
+  z-index: 0;
+}
+
+
+/* ==========================================
+   LOGIN CARD
+========================================== */
 
 .login-card {
   position: relative;
+
   z-index: 5;
+
   width: 430px;
-  background: rgba(255,255,255,.92);
-  backdrop-filter: blur(20px);
+
+  background:
+    rgba(255,255,255,.92);
+
+  backdrop-filter:
+    blur(20px);
+
   border-radius: 26px;
+
   padding: 36px 34px;
-  box-shadow: 0 20px 50px rgba(0,0,0,.15);
-  animation: cardFade .8s ease;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,.15);
+
+  animation:
+    cardFade .8s ease;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+
   cursor: default;
 }
 
-.login-card:hover{
-    transform: translateY(-8px);
-    box-shadow: 0 28px 60px rgba(0,0,0,.18);
+.login-card:hover {
+  transform:
+    translateY(-8px);
+
+  box-shadow:
+    0 28px 60px rgba(0,0,0,.18);
 }
+
 
 @keyframes cardFade {
+
   from {
     opacity: 0;
-    transform: translateY(35px) scale(.95);
+    transform:
+      translateY(35px)
+      scale(.95);
   }
+
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform:
+      translateY(0)
+      scale(1);
   }
+
 }
 
-/* ========================= LOGO ========================= */
+
+/* ==========================================
+   LOGO
+========================================== */
 
 .logo-container {
   text-align: center;
+
   margin-bottom: 20px;
 }
 
-.logo-circle{
+.logo-circle {
+  width: 88px;
+  height: 88px;
 
-    width:88px;
-    height:88px;
+  margin: auto;
 
-    margin:auto;
+  border-radius: 24px;
 
-    border-radius:24px;
+  background:
+    linear-gradient(
+      145deg,
+      #16A34A,
+      #22C55E
+    );
 
-    background:linear-gradient(145deg,#16A34A,#22C55E);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+  font-size: 38px;
 
-    font-size:38px;
+  box-shadow:
+    0 15px 35px rgba(34,197,94,.35);
 
-    box-shadow:
-      0 15px 35px rgba(34,197,94,.35);
-
-    animation:logoPulse 4s ease infinite;
+  animation:
+    logoPulse 4s ease infinite;
 }
 
-@keyframes logoPulse{
 
-    0%,100%{
-        transform:scale(1);
-    }
+@keyframes logoPulse {
 
-    50%{
-        transform:scale(1.05);
-    }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
 
 }
+
 
 .logo-container h1 {
   color: #14532D;
+
   font-size: 34px;
+
   margin-top: 14px;
+
   font-weight: 700;
 }
 
 .logo-container p {
   color: #64748B;
+
   font-size: 14px;
+
   margin-top: 5px;
 }
 
-/* ========================= TEXT ========================= */
+
+/* ==========================================
+   TEXT
+========================================== */
 
 .login-card h2 {
   text-align: center;
+
   color: #14532D;
+
   margin-bottom: 24px;
+
   font-size: 28px;
 }
 
-/* ========================= INPUTS ========================= */
+
+/* ==========================================
+   INPUTS
+========================================== */
 
 .input-group {
   display: flex;
+
   align-items: center;
+
   gap: 12px;
-  background: #F9FFFD;
-  border: 1px solid #D1FAE5;
-  padding: 14px 16px;
+
+  background:
+    #F9FFFD;
+
+  border:
+    1px solid #D1FAE5;
+
+  padding:
+    14px 16px;
+
   border-radius: 15px;
+
   margin-bottom: 18px;
+
   transition: .25s ease;
 }
 
 .input-group:hover,
-.input-group:focus-within{
+.input-group:focus-within {
 
-    transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 
-    border-color:#16A34A;
+  border-color:
+    #16A34A;
 
-    background:#FFFFFF;
+  background:
+    #FFFFFF;
 
-    box-shadow:
-      0 0 0 4px rgba(34,197,94,.12),
-      0 10px 25px rgba(34,197,94,.08);
+  box-shadow:
+    0 0 0 4px rgba(34,197,94,.12),
+    0 10px 25px rgba(34,197,94,.08);
 }
 
 .input-group svg {
@@ -241,409 +361,933 @@
 
 .input-group input {
   border: none;
+
   outline: none;
+
   flex: 1;
-  background: transparent;
-  color: #14532D;
+
+  background:
+    transparent;
+
+  color:
+    #14532D;
+
   font-size: 15px;
 }
 
+
+/* ==========================================
+   PASSWORD EYE
+========================================== */
+
 .eye-btn {
   background: none;
+
   border: none;
+
   cursor: pointer;
+
   color: #64748B;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* ========================= OPTIONS ========================= */
+.eye-btn:hover {
+  color: #16A34A;
+}
+
+
+/* ==========================================
+   OPTIONS
+========================================== */
 
 .login-options {
   display: flex;
+
   justify-content: space-between;
+
   align-items: center;
+
   margin-bottom: 22px;
+
   font-size: 13px;
 }
 
 .login-options label {
   display: flex;
+
   align-items: center;
+
   gap: 6px;
+
   color: #166534;
 }
 
 .login-options input {
-  accent-color: #16A34A;
+  accent-color:
+    #16A34A;
 }
 
 .forgot-link {
   background: none;
+
   border: none;
+
   color: #16A34A;
+
   cursor: pointer;
+
   font-weight: 600;
 }
 
 .forgot-link:hover {
-  text-decoration: underline;
+  text-decoration:
+    underline;
 }
 
-/* ========================= BUTTONS ========================= */
 
-.login-btn{
+/* ==========================================
+   LOGIN BUTTON
+========================================== */
 
-    width:100%;
-    border:none;
-    border-radius:15px;
-    padding:15px;
-    position:relative;
+.login-btn {
+  width: 100%;
 
-    background:linear-gradient(90deg,#16A34A,#22C55E);
+  border: none;
 
-    color:white;
-    font-weight:700;
-    font-size:15px;
+  border-radius: 15px;
 
-    overflow:hidden;
-    cursor:pointer;
+  padding: 15px;
 
-    transition:.3s ease;
+  position: relative;
+
+  background:
+    linear-gradient(
+      90deg,
+      #16A34A,
+      #22C55E
+    );
+
+  color: white;
+
+  font-weight: 700;
+
+  font-size: 15px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  transition: .3s ease;
 }
 
-.login-btn::before{
+.login-btn::before {
+  content: "";
 
-    content:"";
+  position: absolute;
 
-    position:absolute;
-    top:0;
-    left:-120%;
+  top: 0;
+  left: -120%;
 
-    width:70%;
-    height:100%;
+  width: 70%;
+  height: 100%;
 
-    background:linear-gradient(
+  background:
+    linear-gradient(
       120deg,
       transparent,
       rgba(255,255,255,.55),
       transparent
     );
 
-    transition:.7s;
+  transition: .7s;
 }
 
-.login-btn:hover::before{
-    left:140%;
+.login-btn:hover::before {
+  left: 140%;
 }
 
-.login-btn:hover{
+.login-btn:hover {
+  transform:
+    translateY(-2px);
 
-    transform:translateY(-2px);
-
-    box-shadow:0 14px 30px rgba(22,163,74,.35);
+  box-shadow:
+    0 14px 30px
+    rgba(22,163,74,.35);
 }
+
+
+/* ==========================================
+   SIGN UP
+========================================== */
 
 .signup-btn {
   width: 100%;
+
   padding: 14px;
+
   margin-top: 15px;
+
   border-radius: 15px;
-  border: 2px solid #16A34A;
-  background: transparent;
-  color: #16A34A;
-  font-weight: 700;
-  cursor: pointer;
-  transition: .25s;
+
+  border:
+    2px solid #16A34A;
+
+  background:
+    transparent;
+
+  color:
+    #16A34A;
+
+  font-weight:
+    700;
+
+  cursor:
+    pointer;
+
+  transition:
+    .25s;
 }
 
 .signup-btn:hover {
-  background: #16A34A;
-  color: white;
+  background:
+    #16A34A;
+
+  color:
+    white;
 }
 
-/* Google */
+
+/* ==========================================
+   GOOGLE
+========================================== */
 
 .divider {
   display: flex;
+
   align-items: center;
+
   gap: 12px;
+
   margin: 22px 0;
 }
 
 .divider::before,
 .divider::after {
   content: "";
+
   flex: 1;
+
   height: 1px;
-  background: #D1D5DB;
+
+  background:
+    #D1D5DB;
 }
 
 .divider span {
-  color: #64748B;
-  font-size: 12px;
+  color:
+    #64748B;
+
+  font-size:
+    12px;
 }
 
-.google-btn{
+.google-btn {
+  width: 100%;
 
-    width:100%;
+  padding: 15px;
 
-    padding:15px;
+  border-radius: 14px;
 
-    border-radius:14px;
+  border:
+    1px solid #E5E7EB;
 
-    border:1px solid #E5E7EB;
+  background:
+    #FFFFFF;
 
-    background:#FFFFFF;
+  display: flex;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:12px;
+  justify-content: center;
 
-    font-weight:600;
+  align-items: center;
 
-    transition:.3s ease;
+  gap: 12px;
 
-    cursor:pointer;
-}
+  font-weight: 600;
 
-.google-btn:hover{
+  transition:
+    .3s ease;
 
-    transform:translateY(-2px);
-
-    border-color:#16A34A;
-
-    box-shadow:0 10px 22px rgba(34,197,94,.12);
-
-}
-
-.google-btn img {
-  width: 20px;
+  cursor:
+    pointer;
 }
 
 .google-btn:hover {
-  background: #F0FDF4;
-  border-color: #16A34A;
+  transform:
+    translateY(-2px);
+
+  border-color:
+    #16A34A;
+
+  box-shadow:
+    0 10px 22px
+    rgba(34,197,94,.12);
+
+  background:
+    #F0FDF4;
 }
 
-/* ========================= RESPONSIVE ========================= */
+.google-btn img {
+  width:
+    20px;
+}
+
+
+/* ==========================================
+   PROJECT DETAILS CARD
+   SEPARATE FROM LOGIN CARD
+========================================== */
+
+.project-details-card {
+  position: fixed;
+
+  right: 28px;
+  bottom: 28px;
+
+  width: 285px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  padding: 16px;
+
+  border-radius: 18px;
+
+  background:
+    rgba(255,255,255,.94);
+
+  backdrop-filter:
+    blur(20px);
+
+  -webkit-backdrop-filter:
+    blur(20px);
+
+  border:
+    1px solid rgba(255,255,255,.65);
+
+  box-shadow:
+    0 18px 45px
+    rgba(0,0,0,.16);
+
+  z-index: 50;
+
+  animation:
+    projectCardIn .7s ease .3s both;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.project-details-card:hover {
+  transform:
+    translateY(-5px);
+
+  box-shadow:
+    0 22px 50px
+    rgba(0,0,0,.2);
+}
+
+
+@keyframes projectCardIn {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(25px)
+      translateX(15px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      translateX(0);
+  }
+
+}
+
+
+/* Project icon */
+
+.project-details-icon {
+
+  min-width: 40px;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background:
+    #ECFDF5;
+
+  color:
+    #16A34A;
+}
+
+
+/* Project text */
+
+.project-details-content {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.project-details-content h4 {
+
+  margin: 0 0 5px;
+
+  color:
+    #14532D;
+
+  font-size:
+    14px;
+
+  font-weight:
+    700;
+}
+
+.project-details-content p {
+
+  margin: 0;
+
+  color:
+    #64748B;
+
+  font-size:
+    11px;
+
+  line-height:
+    1.5;
+}
+
+
+/* Project link */
+
+.project-details-link {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  margin-top: 9px;
+
+  color:
+    #16A34A;
+
+  font-size:
+    11.5px;
+
+  font-weight:
+    700;
+
+  text-decoration:
+    none;
+
+  transition:
+    .2s ease;
+}
+
+.project-details-link:hover {
+
+  color:
+    #14532D;
+
+  transform:
+    translateX(3px);
+}
+
+
+/* ==========================================
+   BACKGROUND GLOW CIRCLES
+========================================== */
+
+.glow-circle {
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter:
+    blur(80px);
+
+  z-index: 0;
+
+  opacity: .55;
+
+  animation:
+    glowMove 8s ease-in-out infinite;
+}
+
+.glow1 {
+
+  width: 220px;
+  height: 220px;
+
+  background:
+    #6EE7B7;
+
+  top: 10%;
+  left: 18%;
+}
+
+.glow2 {
+
+  width: 180px;
+  height: 180px;
+
+  background:
+    #A7F3D0;
+
+  bottom: 12%;
+  right: 15%;
+
+  animation-delay:
+    3s;
+}
+
+
+@keyframes glowMove {
+
+  0%,
+  100% {
+    transform:
+      translateY(0px)
+      translateX(0px);
+  }
+
+  50% {
+    transform:
+      translateY(-18px)
+      translateX(12px);
+  }
+
+}
+
+
+/* ==========================================
+   ECG HEARTBEAT
+========================================== */
+
+.heartbeat-line {
+
+  position: absolute;
+
+  bottom: 120px;
+
+  left: 0;
+
+  width: 100%;
+
+  opacity: .45;
+
+  z-index: 1;
+
+  animation:
+    heartbeatMove 6s linear infinite;
+}
+
+.heartbeat-line svg {
+
+  width: 100%;
+
+  height: 120px;
+}
+
+
+@keyframes heartbeatMove {
+
+  from {
+    transform:
+      translateX(-20px);
+  }
+
+  to {
+    transform:
+      translateX(20px);
+  }
+
+}
+
+
+/* ==========================================
+   FORGOT PASSWORD MODAL
+========================================== */
+
+.forgot-overlay {
+
+  position: fixed;
+
+  inset: 0;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background:
+    rgba(0,0,0,0.45);
+
+  backdrop-filter:
+    blur(10px);
+
+  z-index: 9999;
+
+  animation:
+    fadeOverlay .25s ease;
+}
+
+
+@keyframes fadeOverlay {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+
+.forgot-modal {
+
+  position: relative;
+
+  width: 420px;
+
+  max-width: 90%;
+
+  background:
+    rgba(255,255,255,0.96);
+
+  backdrop-filter:
+    blur(20px);
+
+  border-radius: 24px;
+
+  padding: 32px;
+
+  box-shadow:
+    0 25px 60px
+    rgba(0,0,0,0.25);
+
+  animation:
+    popup .3s ease;
+}
+
+
+@keyframes popup {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(25px)
+      scale(.95);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+}
+
+
+/* ==========================================
+   CLOSE MODAL
+========================================== */
+
+.close-modal {
+
+  position: absolute;
+
+  top: 16px;
+  right: 18px;
+
+  width: 34px;
+  height: 34px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background:
+    #ECFDF5;
+
+  color:
+    #166534;
+
+  font-size:
+    18px;
+
+  cursor:
+    pointer;
+
+  transition:
+    .25s;
+}
+
+.close-modal:hover {
+
+  background:
+    #16A34A;
+
+  color:
+    white;
+}
+
+
+/* ==========================================
+   FORGOT MODAL TEXT
+========================================== */
+
+.forgot-modal h2 {
+
+  color:
+    #14532D;
+
+  text-align:
+    center;
+
+  margin-bottom:
+    10px;
+}
+
+.forgot-modal p {
+
+  text-align:
+    center;
+
+  color:
+    #64748B;
+
+  margin-bottom:
+    24px;
+
+  line-height:
+    1.6;
+}
+
+
+/* ==========================================
+   SUCCESS MESSAGE
+========================================== */
+
+.success-message {
+
+  text-align:
+    center;
+}
+
+.success-icon {
+
+  width:
+    72px;
+
+  height:
+    72px;
+
+  margin:
+    auto;
+
+  margin-bottom:
+    18px;
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  align-items:
+    center;
+
+  border-radius:
+    50%;
+
+  background:
+    #DCFCE7;
+
+  font-size:
+    34px;
+}
+
+.success-message h3 {
+
+  color:
+    #16A34A;
+
+  margin-bottom:
+    12px;
+}
+
+.success-message p {
+
+  margin-bottom:
+    20px;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
 
 @media (max-width: 768px) {
 
   .login-card {
-    width: 92%;
-    padding: 28px 24px;
+
+    width:
+      92%;
+
+    padding:
+      28px 24px;
   }
+
 
   .bubble {
-    width: 55px;
-    height: 55px;
-    font-size: 22px;
+
+    width:
+      55px;
+
+    height:
+      55px;
+
+    font-size:
+      22px;
   }
 
-  .bubble1 { top: 60px; left: 12%; }
-  .bubble2 { left: 2%; }
-  .bubble3 { right: 5%; }
-  .bubble4 { right: 15%; }
-}
 
-/* ===========================
-      BACKGROUND GLOW CIRCLES
-=========================== */
+  .bubble1 {
+    top: 60px;
+    left: 12%;
+  }
 
-.glow-circle{
+  .bubble2 {
+    left: 2%;
+  }
 
-    position:absolute;
-    border-radius:50%;
-    filter:blur(80px);
-    z-index:0;
-    opacity:.55;
+  .bubble3 {
+    right: 5%;
+  }
 
-    animation:glowMove 8s ease-in-out infinite;
-}
+  .bubble4 {
+    right: 15%;
+  }
 
-.glow1{
 
-    width:220px;
-    height:220px;
+  /* Project card moves below the login card
+     on smaller screens so it never overlaps */
 
-    background:#6EE7B7;
+  .project-details-card {
 
-    top:10%;
-    left:18%;
-}
+    position: fixed;
 
-.glow2{
+    right: 16px;
+    bottom: 16px;
 
-    width:180px;
-    height:180px;
-
-    background:#A7F3D0;
-
-    bottom:12%;
-    right:15%;
-
-    animation-delay:3s;
-}
-
-@keyframes glowMove{
-
-    0%,100%{
-        transform:translateY(0px) translateX(0px);
-    }
-
-    50%{
-        transform:translateY(-18px) translateX(12px);
-    }
-}
-
-/* ===========================
-        ECG HEARTBEAT
-=========================== */
-
-.heartbeat-line{
-    position:absolute;
-
-    bottom:120px;
-    left:0;
-
-    width:100%;
-    opacity:.45;
-
-    z-index:1;
-
-    animation:heartbeatMove 6s linear infinite;
-}
-
-.heartbeat-line svg{
-    width:100%;
-    height:120px;
-}
-
-@keyframes heartbeatMove{
-
-    from{
-        transform:translateX(-20px);
-    }
-
-    to{
-        transform:translateX(20px);
-    }
+    width:
+      min(285px, calc(100vw - 32px));
+  }
 
 }
+
 
 /* ==========================================
-        FORGOT PASSWORD MODAL
+   SMALL MOBILE
 ========================================== */
 
-.forgot-overlay{
-    position: fixed;
-    inset: 0;
+@media (max-width: 500px) {
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+  .login-page {
 
-    background: rgba(0,0,0,0.45);
-    backdrop-filter: blur(10px);
+    height: auto;
 
-    z-index: 9999;
-    animation: fadeOverlay .25s ease;
-}
+    min-height: 100vh;
 
-@keyframes fadeOverlay{
-    from{opacity:0;}
-    to{opacity:1;}
-}
+    padding:
+      25px 0 115px;
 
-.forgot-modal{
-    position: relative;
+    overflow-y: auto;
+  }
 
-    width: 420px;
-    max-width: 90%;
 
-    background: rgba(255,255,255,0.96);
-    backdrop-filter: blur(20px);
+  .login-card {
 
-    border-radius: 24px;
-    padding: 32px;
+    width:
+      calc(100% - 28px);
 
-    box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+    padding:
+      28px 22px;
+  }
 
-    animation: popup .3s ease;
-}
 
-@keyframes popup{
-    from{
-        opacity:0;
-        transform:translateY(25px) scale(.95);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0) scale(1);
-    }
-}
+  .logo-container h1 {
 
-.close-modal{
-    position:absolute;
-    top:16px;
-    right:18px;
+    font-size:
+      30px;
+  }
 
-    width:34px;
-    height:34px;
 
-    border:none;
-    border-radius:50%;
-    background:#ECFDF5;
+  .project-details-card {
 
-    color:#166534;
-    font-size:18px;
-    cursor:pointer;
-    transition:.25s;
-}
+    right:
+      14px;
 
-.close-modal:hover{
-    background:#16A34A;
-    color:white;
-}
+    bottom:
+      14px;
 
-.forgot-modal h2{
-    color:#14532D;
-    text-align:center;
-    margin-bottom:10px;
-}
+    width:
+      calc(100vw - 28px);
 
-.forgot-modal p{
-    text-align:center;
-    color:#64748B;
-    margin-bottom:24px;
-    line-height:1.6;
-}
+    max-width:
+      300px;
+  }
 
-.success-message{
-    text-align:center;
-}
 
-.success-icon{
-    width:72px;
-    height:72px;
-    margin:auto;
-    margin-bottom:18px;
+  .bubble {
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    display:
+      none;
+  }
 
-    border-radius:50%;
-    background:#DCFCE7;
 
-    font-size:34px;
-}
+  .heartbeat-line {
 
-.success-message h3{
-    color:#16A34A;
-    margin-bottom:12px;
-}
+    display:
+      none;
+  }
 
-.success-message p{
-    margin-bottom:20px;
 }

@@ -52,7 +52,7 @@ export default function HeroCard({ darkMode }) {
       >
         <span className="hero-tag">CARE OVERVIEW</span>
 
-        <h1>Hello, Caregiver 👋</h1>
+        <h1>Hello, Caretaker 👋</h1>
 
         <div className="hero-patient">
           <h2>{patientData.name}</h2>

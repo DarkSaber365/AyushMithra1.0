@@ -16,7 +16,7 @@ export default function Sidebar({ darkMode }) {
         <div className="sidebar-logo">
           <div className="logo-icon">💊</div>
           <div>
-            <h2>PillCare</h2>
+            <h2>AyushMithra</h2>
             <p>Medication Companion</p>
           </div>
         </div>
