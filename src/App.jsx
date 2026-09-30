@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Login/Signup";
@@ -14,7 +14,7 @@ import { ThemeProvider } from "./context/ThemeContext";
 function App() {
   return (
     <ThemeProvider>
-      <BrowserRouter basename="/AyushMithra1.0">
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
@@ -30,7 +30,7 @@ function App() {
             element={<Navigate to="/" replace />}
           />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   );
 }
