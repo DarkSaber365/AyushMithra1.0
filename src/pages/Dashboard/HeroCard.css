@@ -1,0 +1,724 @@
+/* ==========================================
+   PILLCARE — PREMIUM CARE OVERVIEW HERO
+========================================== */
+
+.hero-card {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+
+    gap: 30px;
+
+    padding: 30px;
+    border-radius: 26px;
+
+    position: relative;
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.86);
+
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+
+    border: 1px solid rgba(22, 163, 74, 0.10);
+
+    box-shadow:
+        0 14px 38px rgba(15, 23, 42, 0.055);
+
+    animation: heroFade 0.55s ease;
+}
+
+
+/* ==========================================
+   DECORATIVE BACKGROUND
+========================================== */
+
+.hero-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    border-radius: 50%;
+
+    background: rgba(34, 197, 94, 0.055);
+
+    top: -120px;
+    right: -80px;
+
+    pointer-events: none;
+
+    animation: blobFloat 10s ease-in-out infinite;
+}
+
+.hero-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background: rgba(16, 185, 129, 0.035);
+
+    bottom: -90px;
+    left: -60px;
+
+    pointer-events: none;
+
+    animation: blobFloat 12s ease-in-out infinite reverse;
+}
+
+@keyframes blobFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes heroFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ==========================================
+   LEFT SIDE
+========================================== */
+
+.hero-left {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-tag {
+    width: max-content;
+
+    padding: 6px 11px;
+
+    border-radius: 999px;
+
+    background: #dcfce7;
+    color: #15803d;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1.1px;
+}
+
+
+/* Greeting */
+
+.hero-left h1 {
+    margin: 16px 0 0;
+
+    color: #14532d;
+
+    font-size: 34px;
+    line-height: 1.15;
+
+    font-weight: 720;
+}
+
+
+/* Patient */
+
+.hero-patient {
+    display: flex;
+    align-items: baseline;
+
+    gap: 10px;
+
+    margin-top: 7px;
+}
+
+.hero-patient h2 {
+    margin: 0;
+
+    color: #16a34a;
+
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.hero-patient span {
+    color: #64748b;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* Description */
+
+.hero-description {
+    margin: 14px 0 0;
+
+    max-width: 480px;
+
+    color: #64748b;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* ==========================================
+   DATE & TIME
+========================================== */
+
+.hero-date-time {
+    margin-top: 20px;
+
+    max-width: 480px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 12px 14px;
+
+    border-radius: 15px;
+
+    background: #f0fdf4;
+
+    border: 1px solid #dcfce7;
+}
+
+.date-row {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #166534;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.hero-date-time strong {
+    color: #16a34a;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+
+/* ==========================================
+   STATUS
+========================================== */
+
+.hero-status-row {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 15px;
+}
+
+.status-pill {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 8px 12px;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+    font-weight: 650;
+}
+
+.patient-status {
+    background: #f0fdf4;
+    color: #166534;
+
+    border: 1px solid #dcfce7;
+}
+
+.safe {
+    background: #dcfce7;
+    color: #166534;
+
+    border: 1px solid #bbf7d0;
+}
+
+.warning {
+    background: #fef3c7;
+    color: #92400e;
+
+    border: 1px solid #fde68a;
+}
+
+
+/* ==========================================
+   RIGHT SIDE
+========================================== */
+
+.hero-right {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: stretch;
+}
+
+
+/* ==========================================
+   MEDICATION PROGRESS CARD
+========================================== */
+
+.care-progress-card {
+    width: 100%;
+
+    padding: 22px;
+
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, 0.72);
+
+    border: 1px solid rgba(22, 163, 74, 0.09);
+
+    box-shadow:
+        0 10px 25px rgba(22, 163, 74, 0.045);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.care-progress-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 15px 30px rgba(22, 163, 74, 0.08);
+}
+
+
+/* Header */
+
+.care-progress-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 14px;
+}
+
+.care-label {
+    display: block;
+
+    color: #16a34a;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.care-progress-header h3 {
+    margin: 5px 0 0;
+
+    color: #14532d;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.care-percentage {
+    min-width: 54px;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: #dcfce7;
+
+    color: #15803d;
+
+    font-size: 16px;
+    font-weight: 800;
+}
+
+
+/* ==========================================
+   PROGRESS BAR
+========================================== */
+
+.progress-track {
+    width: 100%;
+
+    height: 8px;
+
+    margin-top: 21px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background: #ecfdf5;
+}
+
+.progress-fill {
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: linear-gradient(
+        90deg,
+        #16a34a,
+        #34d399
+    );
+
+    transition: width 0.5s ease;
+}
+
+
+/* ==========================================
+   SUMMARY
+========================================== */
+
+.progress-summary {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 10px;
+}
+
+.progress-summary strong {
+    color: #14532d;
+
+    font-size: 12px;
+}
+
+.progress-summary span {
+    color: #64748b;
+
+    font-size: 10px;
+
+    text-align: right;
+}
+
+
+/* ==========================================
+   MEDICATION STATUS
+========================================== */
+
+.medication-status-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+
+    margin-top: 18px;
+}
+
+.medication-status-item {
+    display: grid;
+
+    grid-template-columns: 21px 1fr auto;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 9px 11px;
+
+    border-radius: 12px;
+
+    background: #f8fafc;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.medication-status-item:hover {
+    transform: translateX(2px);
+}
+
+.medication-status-item svg {
+    color: #94a3b8;
+}
+
+.medication-status-item span {
+    color: #475569;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.medication-status-item small {
+    color: #94a3b8;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+/* Completed */
+
+.medication-status-item.completed {
+    background: #f0fdf4;
+}
+
+.medication-status-item.completed svg {
+    color: #16a34a;
+}
+
+.medication-status-item.completed span {
+    color: #166534;
+}
+
+.medication-status-item.completed small {
+    color: #16a34a;
+}
+
+
+/* Pending */
+
+.medication-status-item.pending {
+    background: #f8fafc;
+}
+
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+.dark .hero-card {
+    background: rgba(15, 23, 42, 0.74);
+
+    border-color: rgba(255, 255, 255, 0.07);
+
+    box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.20);
+}
+
+.dark .hero-left h1 {
+    color: #f8fafc;
+}
+
+.dark .hero-patient h2 {
+    color: #86efac;
+}
+
+.dark .hero-patient span {
+    color: #94a3b8;
+}
+
+.dark .hero-description {
+    color: #cbd5e1;
+}
+
+.dark .hero-date-time {
+    background: rgba(30, 41, 59, 0.65);
+
+    border-color: rgba(255, 255, 255, 0.07);
+}
+
+.dark .date-row {
+    color: #cbd5e1;
+}
+
+.dark .hero-date-time strong {
+    color: #86efac;
+}
+
+.dark .patient-status {
+    background: rgba(34, 197, 94, 0.10);
+
+    border-color: rgba(134, 239, 172, 0.12);
+
+    color: #86efac;
+}
+
+.dark .safe {
+    background: rgba(34, 197, 94, 0.12);
+
+    border-color: rgba(134, 239, 172, 0.15);
+
+    color: #86efac;
+}
+
+.dark .warning {
+    background: rgba(245, 158, 11, 0.12);
+
+    border-color: rgba(251, 191, 36, 0.15);
+
+    color: #fcd34d;
+}
+
+
+/* Progress Card */
+
+.dark .care-progress-card {
+    background: rgba(30, 41, 59, 0.68);
+
+    border-color: rgba(255, 255, 255, 0.07);
+}
+
+.dark .care-progress-header h3 {
+    color: #f8fafc;
+}
+
+.dark .care-percentage {
+    background: rgba(34, 197, 94, 0.13);
+
+    color: #86efac;
+}
+
+.dark .progress-track {
+    background: rgba(51, 65, 85, 0.7);
+}
+
+.dark .progress-summary strong {
+    color: #f1f5f9;
+}
+
+.dark .progress-summary span {
+    color: #94a3b8;
+}
+
+
+/* Medication Rows */
+
+.dark .medication-status-item {
+    background: rgba(15, 23, 42, 0.55);
+}
+
+.dark .medication-status-item span {
+    color: #cbd5e1;
+}
+
+.dark .medication-status-item small {
+    color: #94a3b8;
+}
+
+.dark .medication-status-item.completed {
+    background: rgba(34, 197, 94, 0.08);
+}
+
+.dark .medication-status-item.completed span {
+    color: #bbf7d0;
+}
+
+.dark .medication-status-item.completed small {
+    color: #86efac;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1100px) {
+
+    .hero-card {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-right {
+        min-height: auto;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .hero-card {
+        padding: 20px;
+
+        border-radius: 21px;
+    }
+
+    .hero-left h1 {
+        font-size: 28px;
+    }
+
+    .hero-patient h2 {
+        font-size: 23px;
+    }
+
+    .hero-date-time {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .care-progress-card {
+        padding: 19px;
+    }
+
+    .progress-summary {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .progress-summary span {
+        text-align: left;
+    }
+
+    .care-percentage {
+        min-width: 50px;
+        height: 50px;
+    }
+}
+
+
+@media (max-width: 430px) {
+
+    .hero-status-row {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .care-progress-header h3 {
+        font-size: 18px;
+    }
+}

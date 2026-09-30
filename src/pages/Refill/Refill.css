@@ -1,0 +1,902 @@
+/* =========================================================
+   PILLCARE — WEEKLY REFILL PAGE
+========================================================= */
+
+.refill-body {
+  width: 100%;
+  padding: 22px 28px 40px;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE HEADING
+========================================================= */
+
+.refill-heading {
+  margin-bottom: 22px;
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 5px 11px;
+  margin-bottom: 10px;
+
+  border-radius: 999px;
+
+  background: rgba(220, 252, 231, 0.85);
+  color: #15803d;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.dark .section-tag {
+  background: rgba(34, 197, 94, 0.10);
+  color: #86efac;
+}
+
+
+/* Heading row */
+
+.heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.refill-heading h1 {
+  margin: 0 0 6px;
+
+  color: #14532d;
+
+  font-size: 29px;
+  font-weight: 750;
+  letter-spacing: -0.6px;
+}
+
+.dark .refill-heading h1 {
+  color: #f8fafc;
+}
+
+.refill-heading p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.dark .refill-heading p {
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   RESET BUTTON
+========================================================= */
+
+.reset-button {
+  flex: 0 0 auto;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 10px 15px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #16a34a,
+    #22c55e
+  );
+
+  color: white;
+
+  font-size: 10px;
+  font-weight: 750;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 7px 18px rgba(22, 163, 74, 0.16);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.reset-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 22px rgba(22, 163, 74, 0.22);
+}
+
+.reset-button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   WEEKLY PROGRESS
+========================================================= */
+
+.progress-card {
+  margin-top: 18px;
+
+  padding: 20px 22px;
+
+  border-radius: 20px;
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.progress-light {
+  background: rgba(255, 255, 255, 0.58);
+
+  border: 1px solid rgba(255, 255, 255, 0.68);
+
+  box-shadow:
+    0 10px 28px rgba(34, 197, 94, 0.055);
+}
+
+.progress-dark {
+  background: rgba(15, 23, 42, 0.52);
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+/* Progress top */
+
+.progress-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.progress-label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #16a34a;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.progress-top h2 {
+  margin: 0 0 4px;
+
+  color: #14532d;
+
+  font-size: 19px;
+  font-weight: 750;
+}
+
+.dark .progress-top h2 {
+  color: #f8fafc;
+}
+
+.progress-top p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 10px;
+}
+
+.dark .progress-top p {
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   PROGRESS CIRCLE
+========================================================= */
+
+.progress-circle {
+  flex: 0 0 auto;
+
+  width: 72px;
+  height: 72px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  background:
+    linear-gradient(
+      145deg,
+      #dcfce7,
+      #ecfdf5
+    );
+
+  border: 5px solid rgba(22, 163, 74, 0.75);
+
+  box-shadow:
+    0 7px 18px rgba(34, 197, 94, 0.10);
+}
+
+.progress-dark .progress-circle {
+  background: rgba(20, 83, 45, 0.38);
+
+  border-color: rgba(74, 222, 128, 0.55);
+}
+
+.progress-circle h1 {
+  margin: 0;
+
+  color: #16a34a;
+
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.progress-circle span {
+  margin-top: 1px;
+
+  color: #64748b;
+
+  font-size: 7px;
+  font-weight: 700;
+}
+
+.progress-dark .progress-circle span {
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   PROGRESS BAR
+========================================================= */
+
+.progress-bar-bg {
+  width: 100%;
+  height: 7px;
+
+  margin: 17px 0 13px;
+
+  border-radius: 999px;
+
+  background: #dcfce7;
+
+  overflow: hidden;
+}
+
+.dark .progress-bar-bg {
+  background: rgba(34, 197, 94, 0.10);
+}
+
+.progress-bar-fill {
+  height: 100%;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #16a34a,
+      #22c55e
+    );
+
+  transition: width 0.35s ease;
+}
+
+
+/* =========================================================
+   PROGRESS BOTTOM
+========================================================= */
+
+.progress-bottom {
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.progress-info {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  color: #166534;
+
+  font-size: 9px;
+  font-weight: 650;
+}
+
+.progress-info svg {
+  color: #16a34a;
+}
+
+.progress-dark .progress-info {
+  color: #bbf7d0;
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.section-heading {
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.section-mini-label {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #16a34a;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.dark .section-mini-label {
+  color: #86efac;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  color: #14532d;
+
+  font-size: 18px;
+  font-weight: 750;
+  letter-spacing: -0.3px;
+}
+
+.dark .section-heading h2 {
+  color: #f8fafc;
+}
+
+.section-heading p {
+  margin: 4px 0 0;
+
+  color: #64748b;
+
+  font-size: 10px;
+}
+
+.dark .section-heading p {
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   DAILY DOSE TYPES
+========================================================= */
+
+
+
+.dose-type-card:hover {
+  transform: translateY(-2px);
+}
+
+.dark .dose-type-card {
+  background: rgba(15, 23, 42, 0.48);
+
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.dose-type-card.morning .dose-icon {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.dose-type-card.afternoon .dose-icon {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.dose-type-card.night .dose-icon {
+  background: #ede9fe;
+  color: #7c3aed;
+}
+
+.dark .dose-type-card.morning .dose-icon {
+  background: rgba(217, 119, 6, 0.10);
+}
+
+.dark .dose-type-card.afternoon .dose-icon {
+  background: rgba(37, 99, 235, 0.10);
+}
+
+.dark .dose-type-card.night .dose-icon {
+  background: rgba(124, 58, 237, 0.10);
+}
+
+.dose-type-card > span {
+  color: #334155;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.dark .dose-type-card > span {
+  color: #e2e8f0;
+}
+
+
+/* =========================================================
+   WEEKLY STATUS
+========================================================= */
+
+.week-section {
+  margin-top: 4px;
+}
+
+.week-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(7, minmax(0, 1fr));
+
+  gap: 10px;
+
+  margin-top: 14px;
+}
+
+
+/* =========================================================
+   COMPACT DAY CARD
+========================================================= */
+
+.day-card {
+  position: relative;
+
+  min-width: 0;
+
+  min-height: 142px;
+
+  padding: 12px;
+
+  border-radius: 17px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.day-card:hover {
+  transform: translateY(-2px);
+}
+
+
+/* Prepared */
+
+.filled-card {
+  background: rgba(255, 255, 255, 0.58);
+
+  border: 1px solid rgba(34, 197, 94, 0.20);
+
+  box-shadow:
+    0 7px 18px rgba(34, 197, 94, 0.045);
+}
+
+
+/* Dispensed */
+
+.empty-card {
+  background: rgba(248, 250, 252, 0.55);
+
+  border: 1px solid rgba(148, 163, 184, 0.20);
+}
+
+.dark .filled-card {
+  background: rgba(15, 23, 42, 0.50);
+
+  border-color: rgba(34, 197, 94, 0.12);
+}
+
+.dark .empty-card {
+  background: rgba(30, 41, 59, 0.44);
+
+  border-color: rgba(148, 163, 184, 0.10);
+}
+
+
+/* =========================================================
+   DAY HEADER
+========================================================= */
+
+.day-header {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 5px;
+}
+
+.day-header h3 {
+  margin: 0;
+
+  color: #14532d;
+
+  font-size: 12px;
+  font-weight: 750;
+
+  white-space: nowrap;
+}
+
+.dark .day-header h3 {
+  color: #f8fafc;
+}
+
+
+/* =========================================================
+   TODAY BADGE
+========================================================= */
+
+.today-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 4px;
+
+  padding: 3px 6px;
+
+  border-radius: 999px;
+
+  background: rgba(34, 197, 94, 0.12);
+
+  color: #16a34a;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 0.3px;
+}
+
+.dark .today-badge {
+  background: rgba(34, 197, 94, 0.10);
+
+  color: #86efac;
+}
+
+
+/* =========================================================
+   COMPACT STATUS ICON
+========================================================= */
+
+.compact-status-icon {
+  width: 48px;
+  height: 48px;
+
+  margin: 17px 0 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+}
+
+.status-ready {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.status-dispensed {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.dark .status-ready {
+  background: rgba(34, 197, 94, 0.11);
+  color: #86efac;
+}
+
+.dark .status-dispensed {
+  background: rgba(100, 116, 139, 0.13);
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   STATUS PILL
+========================================================= */
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 4px 8px;
+
+  border-radius: 999px;
+
+  font-size: 8px;
+  font-weight: 750;
+
+  white-space: nowrap;
+}
+
+.filled-pill {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.empty-pill {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+.dark .filled-pill {
+  background: rgba(34, 197, 94, 0.10);
+  color: #86efac;
+}
+
+.dark .empty-pill {
+  background: rgba(100, 116, 139, 0.14);
+  color: #cbd5e1;
+}
+
+
+/* =========================================================
+   SUMMARY CARD
+========================================================= */
+
+.summary-card {
+  margin-top: 22px;
+
+  padding: 18px 20px;
+
+  border-radius: 19px;
+
+  background: rgba(255, 255, 255, 0.56);
+
+  border: 1px solid rgba(255, 255, 255, 0.62);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.dark .summary-card {
+  background: rgba(15, 23, 42, 0.48);
+
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+
+/* Summary heading */
+
+.summary-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 13px;
+}
+
+.summary-heading svg {
+  color: #16a34a;
+}
+
+.dark .summary-heading svg {
+  color: #86efac;
+}
+
+.summary-heading h3 {
+  margin: 0;
+
+  color: #14532d;
+
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.dark .summary-heading h3 {
+  color: #f8fafc;
+}
+
+
+/* =========================================================
+   SUMMARY GRID
+========================================================= */
+
+.summary-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 10px;
+}
+
+.summary-box {
+  padding: 11px 13px;
+
+  border-radius: 12px;
+
+  background: rgba(240, 253, 244, 0.65);
+}
+
+.dark .summary-box {
+  background: rgba(30, 41, 59, 0.45);
+}
+
+.summary-box span {
+  display: block;
+
+  color: #64748b;
+
+  font-size: 8px;
+  font-weight: 650;
+}
+
+.dark .summary-box span {
+  color: #94a3b8;
+}
+
+.summary-box h2 {
+  margin: 4px 0 0;
+
+  color: #14532d;
+
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.dark .summary-box h2 {
+  color: #f8fafc;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .week-grid {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — SMALL TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .refill-body {
+    padding: 20px 18px 32px;
+  }
+
+  .heading-row {
+    align-items: flex-start;
+  }
+
+  .progress-top {
+    align-items: flex-start;
+  }
+
+  .week-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .refill-body {
+    padding: 16px 14px 28px;
+  }
+
+  .heading-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .refill-heading h1 {
+    font-size: 25px;
+  }
+
+  .reset-button {
+    width: 100%;
+  }
+
+  .progress-card {
+    padding: 17px;
+  }
+
+  .progress-top {
+    flex-direction: column;
+  }
+
+  .progress-circle {
+    align-self: flex-start;
+  }
+
+  .progress-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 7px;
+  }
+
+  .dose-types {
+    grid-template-columns: 1fr;
+  }
+
+  .week-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .week-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .day-card {
+    min-height: 125px;
+  }
+
+}

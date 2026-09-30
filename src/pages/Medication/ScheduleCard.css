@@ -1,0 +1,99 @@
+.schedule-card{
+    padding:18px;
+    border-radius:22px;
+    background:rgba(255,255,255,.55);
+    border:1px solid rgba(255,255,255,.55);
+    backdrop-filter:blur(16px);
+    box-shadow:0 10px 24px rgba(34,197,94,.08);
+}
+
+.dark-schedule{
+    background:rgba(15,23,42,.5);
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.schedule-header{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:18px;
+}
+
+.schedule-icon{
+    width:46px;
+    height:46px;
+    border-radius:14px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+}
+
+.schedule-header h3{
+    font-size:18px;
+    color:#14532D;
+}
+
+.dark-schedule h3{
+    color:white;
+}
+
+.schedule-header p{
+    font-size:13px;
+    color:#64748B;
+}
+
+.timeline-list{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.timeline-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 14px;
+    border-radius:14px;
+    background:rgba(240,253,244,.65);
+}
+
+.dark-schedule .timeline-item{
+    background:rgba(30,41,59,.45);
+}
+
+.timeline-time{
+    font-weight:600;
+    color:#14532D;
+}
+
+.dark-schedule .timeline-time{
+    color:white;
+}
+
+.dose-status{
+    padding:5px 12px;
+    border-radius:999px;
+    font-size:11px;
+    font-weight:700;
+}
+
+.taken{
+    background:#DCFCE7;
+    color:#15803D;
+}
+
+.waiting{
+    background:#FEF3C7;
+    color:#B45309;
+}
+
+.scheduled{
+    background:#E0F2FE;
+    color:#0369A1;
+}
+
+.missed{
+    background:#FEE2E2;
+    color:#B91C1C;
+}

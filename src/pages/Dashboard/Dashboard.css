@@ -1,0 +1,128 @@
+/* ==========================================
+   DASHBOARD BASE
+========================================== */
+
+.dashboard-page {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.dashboard-body {
+    width: 100%;
+    padding: 20px 28px 40px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 22px;
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   QUICK ACTIONS
+========================================== */
+
+.quick-actions-top {
+    width: 100%;
+}
+
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.hero-section {
+    width: 100%;
+}
+
+
+/* ==========================================
+   MIDDLE CONTENT
+========================================== */
+
+.middle-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.05fr)
+        minmax(0, 0.95fr);
+
+    gap: 22px;
+}
+
+
+/* ==========================================
+   BOTTOM CONTENT
+========================================== */
+
+.bottom-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 22px;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1200px) {
+
+    .dashboard-body {
+        padding: 18px 22px 36px;
+        gap: 20px;
+    }
+
+    .middle-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bottom-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* ==========================================
+   SMALL TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+    .dashboard-body {
+        padding: 18px;
+    }
+
+    .bottom-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .dashboard-body {
+        padding: 14px 14px 28px;
+        gap: 16px;
+    }
+
+    .middle-grid,
+    .bottom-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}

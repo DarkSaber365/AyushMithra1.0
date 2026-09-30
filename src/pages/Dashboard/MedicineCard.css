@@ -1,0 +1,495 @@
+/* ==========================================
+   PILLCARE — DASHBOARD MEDICATION CARD
+========================================== */
+
+.medicine-card {
+    width: 100%;
+
+    padding: 24px;
+
+    border-radius: 24px;
+
+    background: rgba(255, 255, 255, 0.84);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(22, 163, 74, 0.09);
+
+    box-shadow:
+        0 12px 30px rgba(15, 23, 42, 0.055);
+
+    display: flex;
+    flex-direction: column;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+    animation: medicineCardFade 0.55s ease;
+}
+
+.medicine-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 16px 34px rgba(22, 163, 74, 0.085);
+}
+
+@keyframes medicineCardFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.medicine-card-header {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 14px;
+}
+
+.card-label {
+    display: block;
+
+    color: #16a34a;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.medicine-card-header h2 {
+    margin: 5px 0 0;
+
+    color: #14532d;
+
+    font-size: 21px;
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   PROGRESS SUMMARY
+========================================== */
+
+.medicine-progress {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 2px;
+}
+
+.medicine-progress strong {
+    color: #15803d;
+
+    font-size: 21px;
+    line-height: 1;
+
+    font-weight: 800;
+}
+
+.medicine-progress span {
+    color: #94a3b8;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* ==========================================
+   PROGRESS BAR
+========================================== */
+
+.medicine-progress-bar {
+    width: 100%;
+
+    height: 7px;
+
+    margin-top: 18px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background: #ecfdf5;
+}
+
+.medicine-progress-fill {
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: linear-gradient(
+        90deg,
+        #16a34a,
+        #34d399
+    );
+
+    transition: width 0.5s ease;
+}
+
+
+/* ==========================================
+   MEDICATION SCHEDULE
+========================================== */
+
+.medicine-schedule {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-top: 16px;
+}
+
+.medicine-row {
+    display: grid;
+
+    grid-template-columns: 40px 1fr auto;
+
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 10px 11px;
+
+    border-radius: 15px;
+
+    background: #f8fafc;
+
+    border: 1px solid transparent;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.medicine-row:hover {
+    transform: translateX(2px);
+
+    border-color: #dcfce7;
+}
+
+
+/* Completed */
+
+.medicine-row.medicine-taken {
+    background: #f0fdf4;
+
+    border-color: #dcfce7;
+}
+
+
+/* Pending */
+
+.medicine-row.medicine-pending {
+    background: #f8fafc;
+}
+
+
+/* ==========================================
+   TIME ICON
+========================================== */
+
+.medicine-time-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #ecfdf5;
+
+    color: #16a34a;
+}
+
+.medicine-taken .medicine-time-icon {
+    background: #dcfce7;
+}
+
+
+/* ==========================================
+   ROW INFORMATION
+========================================== */
+
+.medicine-row-info {
+    min-width: 0;
+}
+
+.medicine-row-info h3 {
+    margin: 0;
+
+    color: #334155;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.medicine-row-info span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   STATUS
+========================================== */
+
+.medicine-row-status {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.medicine-row-status.taken {
+    color: #16a34a;
+}
+
+.medicine-row-status.pending {
+    color: #94a3b8;
+}
+
+.medicine-row-status.taken svg {
+    color: #16a34a;
+}
+
+
+@keyframes sensorPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.45;
+        transform: scale(0.8);
+    }
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.medicine-card-footer {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-top: 13px;
+
+    padding-top: 12px;
+
+    border-top: 1px solid #f1f5f9;
+
+    color: #94a3b8;
+
+    font-size: 9px;
+
+    font-weight: 600;
+}
+
+.medicine-card-footer svg {
+    color: #16a34a;
+
+    flex-shrink: 0;
+
+    transition: transform 0.2s ease;
+}
+
+.medicine-card-footer:hover svg {
+    transform: translateX(3px);
+}
+
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+.dark .medicine-card {
+    background: rgba(15, 23, 42, 0.72);
+
+    border-color: rgba(255, 255, 255, 0.07);
+
+    box-shadow:
+        0 15px 34px rgba(0, 0, 0, 0.20);
+}
+
+.dark .medicine-card-header h2 {
+    color: #f8fafc;
+}
+
+.dark .medicine-progress strong {
+    color: #86efac;
+}
+
+.dark .medicine-progress-bar {
+    background: rgba(51, 65, 85, 0.7);
+}
+
+.dark .medicine-row {
+    background: rgba(30, 41, 59, 0.55);
+
+    border-color: transparent;
+}
+
+.dark .medicine-row:hover {
+    border-color: rgba(134, 239, 172, 0.12);
+}
+
+.dark .medicine-row.medicine-taken {
+    background: rgba(34, 197, 94, 0.08);
+
+    border-color: rgba(134, 239, 172, 0.1);
+}
+
+.dark .medicine-time-icon {
+    background: rgba(34, 197, 94, 0.1);
+
+    color: #86efac;
+}
+
+.dark .medicine-taken .medicine-time-icon {
+    background: rgba(34, 197, 94, 0.14);
+}
+
+.dark .medicine-row-info h3 {
+    color: #e2e8f0;
+}
+
+.dark .medicine-row-info span {
+    color: #94a3b8;
+}
+
+.dark .medicine-row-status.taken {
+    color: #86efac;
+}
+
+.dark .medicine-row-status.taken svg {
+    color: #86efac;
+}
+
+
+
+/* ==========================================
+   FOOTER — DARK
+========================================== */
+
+.dark .medicine-card-footer {
+    border-color: rgba(255, 255, 255, 0.06);
+
+    color: #64748b;
+}
+
+.dark .medicine-card-footer svg {
+    color: #86efac;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 700px) {
+
+    .medicine-card {
+        padding: 20px;
+
+        border-radius: 21px;
+    }
+
+    .medicine-card-header h2 {
+        font-size: 19px;
+    }
+
+    .medicine-progress strong {
+        font-size: 19px;
+    }
+
+    .medicine-row {
+        grid-template-columns: 38px 1fr auto;
+
+        padding: 9px;
+    }
+
+    .medicine-time-icon {
+        width: 38px;
+        height: 38px;
+
+        border-radius: 11px;
+    }
+}
+
+
+@media (max-width: 460px) {
+
+    .medicine-card-header {
+        align-items: flex-start;
+    }
+
+    .medicine-row-status {
+        font-size: 9px;
+    }
+
+    .medicine-sensor-info {
+        align-items: flex-start;
+    }
+
+    .sensor-live {
+        display: none;
+    }
+
+    .medicine-card-footer {
+        font-size: 9px;
+    }
+}

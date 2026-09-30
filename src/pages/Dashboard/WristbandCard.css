@@ -1,0 +1,677 @@
+/* ==========================================
+   PILLCARE — DASHBOARD WRISTBAND CARD
+========================================== */
+
+.wristband-card {
+    width: 100%;
+
+    padding: 24px;
+
+    border-radius: 24px;
+
+    background: rgba(255, 255, 255, 0.84);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(22, 163, 74, 0.09);
+
+    box-shadow:
+        0 12px 30px rgba(15, 23, 42, 0.055);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+    animation: wristFade 0.55s ease;
+}
+
+.wristband-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 16px 34px rgba(22, 163, 74, 0.085);
+}
+
+@keyframes wristFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.wrist-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+}
+
+.wrist-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    min-width: 0;
+}
+
+.wrist-title-icon {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #ecfdf5;
+
+    color: #16a34a;
+}
+
+.card-label {
+    display: block;
+
+    color: #16a34a;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.wrist-header h2 {
+    margin: 5px 0 0;
+
+    color: #14532d;
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   CONNECTION STATUS
+========================================== */
+
+.connection-status {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 7px 10px;
+
+    border-radius: 999px;
+
+    background: #dcfce7;
+
+    color: #15803d;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.live-dot {
+    width: 6px;
+    height: 6px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+
+    box-shadow:
+        0 0 0 4px rgba(34, 197, 94, 0.09);
+
+    animation: pulseDot 1.8s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.45;
+        transform: scale(0.8);
+    }
+}
+
+
+/* ==========================================
+   DEVICE SUMMARY
+========================================== */
+
+.wrist-summary {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 11px 12px;
+
+    border-radius: 14px;
+
+    background: #f0fdf4;
+
+    border: 1px solid #dcfce7;
+}
+
+.wrist-summary-icon {
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #dcfce7;
+
+    color: #16a34a;
+}
+
+.wrist-summary strong {
+    display: block;
+
+    color: #166534;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+.wrist-summary span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #64748b;
+
+    font-size: 9px;
+
+    line-height: 1.4;
+}
+
+
+/* ==========================================
+   HEALTH GRID
+========================================== */
+
+.health-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 9px;
+}
+
+.health-card {
+    min-width: 0;
+
+    padding: 12px;
+
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+
+    border: 1px solid transparent;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.health-card:hover {
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   HEALTH CARD TOP
+========================================== */
+
+.health-card-top {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.health-icon {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+}
+
+.health-card-top svg {
+    width: 17px;
+    height: 17px;
+}
+
+
+/* ==========================================
+   HEART RATE
+========================================== */
+
+.health-card.heart {
+    background: #fef2f2;
+}
+
+.health-card.heart .health-icon {
+    background: #fee2e2;
+
+    color: #ef4444;
+}
+
+.health-card.heart .health-icon svg {
+    animation: heartbeat 1.6s ease-in-out infinite;
+}
+
+
+/* ==========================================
+   SPO2
+========================================== */
+
+.health-card.spo2 {
+    background: #eff6ff;
+}
+
+.health-card.spo2 .health-icon {
+    background: #dbeafe;
+
+    color: #2563eb;
+}
+
+
+/* ==========================================
+   BATTERY
+========================================== */
+
+.health-card.battery {
+    background: #ecfdf5;
+}
+
+.health-card.battery .health-icon {
+    background: #dcfce7;
+
+    color: #16a34a;
+}
+
+
+/* ==========================================
+   GPS
+========================================== */
+
+.health-card.gps-safe {
+    background: #f0fdf4;
+}
+
+.health-card.gps-safe .health-icon {
+    background: #dcfce7;
+
+    color: #16a34a;
+}
+
+.health-card.gps-warning {
+    background: #fff7ed;
+}
+
+.health-card.gps-warning .health-icon {
+    background: #ffedd5;
+
+    color: #ea580c;
+}
+
+
+/* ==========================================
+   GPS STATE DOT
+========================================== */
+
+.gps-state-dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+
+    box-shadow:
+        0 0 0 4px rgba(34, 197, 94, 0.08);
+}
+
+.gps-warning .gps-state-dot {
+    background: #f59e0b;
+
+    box-shadow:
+        0 0 0 4px rgba(245, 158, 11, 0.08);
+}
+
+
+/* ==========================================
+   HEALTH TEXT
+========================================== */
+
+.health-label {
+    color: #64748b;
+
+    font-size: 9px;
+
+    font-weight: 600;
+}
+
+.health-value {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 4px;
+}
+
+.health-value h3 {
+    margin: 0;
+
+    color: #14532d;
+
+    font-size: 19px;
+
+    line-height: 1;
+
+    font-weight: 800;
+}
+
+.health-value > span {
+    color: #94a3b8;
+
+    font-size: 9px;
+
+    font-weight: 600;
+}
+
+
+/* GPS text */
+
+.gps-safe .health-value h3 {
+    color: #15803d;
+}
+
+.gps-warning .health-value h3 {
+    color: #c2410c;
+}
+
+
+/* ==========================================
+   HEARTBEAT
+========================================== */
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.12);
+    }
+
+    45% {
+        transform: scale(0.97);
+    }
+
+    60% {
+        transform: scale(1.08);
+    }
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.wrist-footer {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding-top: 11px;
+
+    border-top: 1px solid #f1f5f9;
+
+    color: #94a3b8;
+
+    font-size: 9px;
+
+    font-weight: 600;
+}
+
+.wrist-footer-status {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: #16a34a;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.7px;
+}
+
+.footer-live-dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+}
+
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+.dark .wristband-card {
+    background: rgba(15, 23, 42, 0.72);
+
+    border-color: rgba(255, 255, 255, 0.07);
+
+    box-shadow:
+        0 15px 34px rgba(0, 0, 0, 0.20);
+}
+
+.dark .wrist-title-icon {
+    background: rgba(34, 197, 94, 0.1);
+
+    color: #86efac;
+}
+
+.dark .wrist-header h2 {
+    color: #f8fafc;
+}
+
+.dark .connection-status {
+    background: rgba(34, 197, 94, 0.12);
+
+    color: #86efac;
+}
+
+.dark .wrist-summary {
+    background: rgba(34, 197, 94, 0.08);
+
+    border-color: rgba(134, 239, 172, 0.1);
+}
+
+.dark .wrist-summary-icon {
+    background: rgba(34, 197, 94, 0.12);
+
+    color: #86efac;
+}
+
+.dark .wrist-summary strong {
+    color: #bbf7d0;
+}
+
+.dark .wrist-summary span {
+    color: #94a3b8;
+}
+
+
+/* Health cards */
+
+.dark .health-card.heart {
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.dark .health-card.spo2 {
+    background: rgba(37, 99, 235, 0.1);
+}
+
+.dark .health-card.battery {
+    background: rgba(34, 197, 94, 0.08);
+}
+
+.dark .health-card.gps-safe {
+    background: rgba(34, 197, 94, 0.08);
+}
+
+.dark .health-card.gps-warning {
+    background: rgba(234, 88, 12, 0.1);
+}
+
+.dark .health-label {
+    color: #94a3b8;
+}
+
+.dark .health-value h3 {
+    color: #f1f5f9;
+}
+
+.dark .health-value > span {
+    color: #94a3b8;
+}
+
+.dark .gps-safe .health-value h3 {
+    color: #86efac;
+}
+
+.dark .gps-warning .health-value h3 {
+    color: #fdba74;
+}
+
+.dark .wrist-footer {
+    border-color: rgba(255, 255, 255, 0.06);
+
+    color: #64748b;
+}
+
+.dark .wrist-footer-status {
+    color: #86efac;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 700px) {
+
+    .wristband-card {
+        padding: 20px;
+
+        border-radius: 21px;
+    }
+
+    .wrist-header h2 {
+        font-size: 19px;
+    }
+
+    .health-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 460px) {
+
+    .wrist-header {
+        align-items: flex-start;
+    }
+
+    .connection-status {
+        padding: 6px 8px;
+    }
+
+    .connection-status span:last-child {
+        display: none;
+    }
+
+    .health-grid {
+        gap: 7px;
+    }
+
+    .health-card {
+        padding: 10px;
+    }
+
+    .health-value h3 {
+        font-size: 17px;
+    }
+
+    .wrist-summary {
+        align-items: flex-start;
+    }
+}

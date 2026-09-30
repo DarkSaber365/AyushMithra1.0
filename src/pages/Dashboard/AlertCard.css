@@ -1,0 +1,489 @@
+/* ==========================================
+   PILLCARE — DASHBOARD ALERT CARD
+========================================== */
+
+.alert-card {
+    width: 100%;
+
+    padding: 22px;
+
+    border-radius: 24px;
+
+    background: rgba(255, 255, 255, 0.84);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(22, 163, 74, 0.09);
+
+    box-shadow:
+        0 12px 30px rgba(15, 23, 42, 0.055);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+    animation: alertFade 0.55s ease;
+}
+
+.alert-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 16px 34px rgba(22, 163, 74, 0.085);
+}
+
+@keyframes alertFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.alert-card-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+}
+
+.alert-label {
+    display: block;
+
+    color: #d97706;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.alert-card-header h2 {
+    margin: 5px 0 0;
+
+    color: #14532d;
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+.alert-header-icon {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #fef3c7;
+
+    color: #d97706;
+}
+
+
+/* ==========================================
+   ALERT CONTENT
+========================================== */
+
+.alert-content {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 11px;
+
+    padding: 13px;
+
+    border-radius: 15px;
+
+    border: 1px solid transparent;
+}
+
+
+/* Warning */
+
+.alert-content.warning {
+    background: #fffbeb;
+
+    border-color: #fde68a;
+}
+
+
+/* Critical */
+
+.alert-content.critical {
+    background: #fef2f2;
+
+    border-color: #fecaca;
+}
+
+
+/* Success */
+
+.alert-content.success {
+    background: #f0fdf4;
+
+    border-color: #dcfce7;
+}
+
+
+/* ==========================================
+   ALERT ICON
+========================================== */
+
+.alert-icon {
+    width: 35px;
+    height: 35px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+}
+
+
+/* Warning */
+
+.warning .alert-icon {
+    background: #fef3c7;
+
+    color: #d97706;
+}
+
+
+/* Critical */
+
+.critical .alert-icon {
+    background: #fee2e2;
+
+    color: #dc2626;
+}
+
+
+/* Success */
+
+.success .alert-icon {
+    background: #dcfce7;
+
+    color: #16a34a;
+}
+
+
+/* ==========================================
+   ALERT DETAILS
+========================================== */
+
+.alert-details {
+    min-width: 0;
+
+    flex: 1;
+}
+
+.alert-title-row {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 8px;
+}
+
+.alert-details h3 {
+    margin: 0;
+
+    color: #334155;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+
+    font-weight: 700;
+}
+
+.alert-details p {
+    margin: 5px 0 0;
+
+    color: #64748b;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+}
+
+
+/* ==========================================
+   ALERT TYPE
+========================================== */
+
+.alert-type {
+    flex-shrink: 0;
+
+    padding: 4px 6px;
+
+    border-radius: 999px;
+
+    font-size: 7px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* Warning */
+
+.warning .alert-type {
+    background: #fef3c7;
+
+    color: #92400e;
+}
+
+
+/* Critical */
+
+.critical .alert-type {
+    background: #fee2e2;
+
+    color: #991b1b;
+}
+
+
+/* Success */
+
+.success .alert-type {
+    background: #dcfce7;
+
+    color: #166534;
+}
+
+
+/* ==========================================
+   TIME
+========================================== */
+
+.alert-time {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #94a3b8;
+
+    font-size: 8px;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.alert-card-footer {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding-top: 11px;
+
+    border-top: 1px solid #f1f5f9;
+
+    color: #94a3b8;
+
+    font-size: 9px;
+
+    font-weight: 600;
+}
+
+.alert-card-footer svg {
+    flex-shrink: 0;
+
+    color: #16a34a;
+
+    transition: transform 0.2s ease;
+}
+
+.alert-card-footer:hover svg {
+    transform: translateX(3px);
+}
+
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+.dark .alert-card {
+    background: rgba(15, 23, 42, 0.72);
+
+    border-color: rgba(255, 255, 255, 0.07);
+
+    box-shadow:
+        0 15px 34px rgba(0, 0, 0, 0.20);
+}
+
+.dark .alert-card-header h2 {
+    color: #f8fafc;
+}
+
+.dark .alert-header-icon {
+    background: rgba(245, 158, 11, 0.12);
+
+    color: #fbbf24;
+}
+
+
+/* Warning */
+
+.dark .alert-content.warning {
+    background: rgba(245, 158, 11, 0.08);
+
+    border-color: rgba(251, 191, 36, 0.12);
+}
+
+.dark .warning .alert-icon {
+    background: rgba(245, 158, 11, 0.12);
+
+    color: #fbbf24;
+}
+
+.dark .warning .alert-type {
+    background: rgba(245, 158, 11, 0.12);
+
+    color: #fcd34d;
+}
+
+
+/* Critical */
+
+.dark .alert-content.critical {
+    background: rgba(239, 68, 68, 0.08);
+
+    border-color: rgba(248, 113, 113, 0.12);
+}
+
+.dark .critical .alert-icon {
+    background: rgba(239, 68, 68, 0.12);
+
+    color: #f87171;
+}
+
+.dark .critical .alert-type {
+    background: rgba(239, 68, 68, 0.12);
+
+    color: #fca5a5;
+}
+
+
+/* Success */
+
+.dark .alert-content.success {
+    background: rgba(34, 197, 94, 0.08);
+
+    border-color: rgba(134, 239, 172, 0.1);
+}
+
+.dark .success .alert-icon {
+    background: rgba(34, 197, 94, 0.12);
+
+    color: #86efac;
+}
+
+.dark .success .alert-type {
+    background: rgba(34, 197, 94, 0.12);
+
+    color: #bbf7d0;
+}
+
+
+/* Text */
+
+.dark .alert-details h3 {
+    color: #e2e8f0;
+}
+
+.dark .alert-details p {
+    color: #94a3b8;
+}
+
+.dark .alert-card-footer {
+    border-color: rgba(255, 255, 255, 0.06);
+
+    color: #64748b;
+}
+
+.dark .alert-card-footer svg {
+    color: #86efac;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 700px) {
+
+    .alert-card {
+        padding: 20px;
+
+        border-radius: 21px;
+    }
+
+    .alert-title-row {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .alert-type {
+        order: -1;
+    }
+}
+
+
+@media (max-width: 430px) {
+
+    .alert-content {
+        padding: 11px;
+
+        gap: 9px;
+    }
+
+    .alert-icon {
+        width: 33px;
+        height: 33px;
+    }
+
+    .alert-details h3 {
+        font-size: 11px;
+    }
+}

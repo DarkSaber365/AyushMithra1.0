@@ -1,0 +1,1628 @@
+/* =========================================================
+   PILLCARE — WRISTBAND & HEALTH PAGE
+   Premium Healthcare Glass UI
+========================================================= */
+
+.page-main {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   PAGE BODY
+========================================================= */
+
+.wristband-body {
+  width: 100%;
+  padding: 24px 28px 45px;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE HEADING
+========================================================= */
+
+.page-heading {
+  margin-bottom: 22px;
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 6px 12px;
+  margin-bottom: 10px;
+
+  border-radius: 999px;
+
+  background: rgba(220, 252, 231, 0.85);
+  color: #15803d;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.dark .section-tag {
+  background: rgba(34, 197, 94, 0.10);
+  color: #86efac;
+}
+
+.page-heading h1 {
+  margin: 0 0 7px;
+
+  color: #14532d;
+
+  font-size: 30px;
+  font-weight: 750;
+  letter-spacing: -0.7px;
+}
+
+.dark .page-heading h1 {
+  color: #f8fafc;
+}
+
+.page-heading p {
+  margin: 0;
+
+  max-width: 720px;
+
+  color: #64748b;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.dark .page-heading p {
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   WRISTBAND HERO
+========================================================= */
+
+.wristband-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 28px;
+
+  padding: 24px 26px;
+  margin-bottom: 26px;
+
+  border-radius: 22px;
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 12px 32px rgba(22, 163, 74, 0.06);
+
+  box-sizing: border-box;
+}
+
+.light-card {
+  background: rgba(255, 255, 255, 0.60);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+}
+
+.dark-card {
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.hero-left {
+  min-width: 0;
+}
+
+.connection-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 6px 10px;
+
+  border-radius: 999px;
+
+  background: rgba(220, 252, 231, 0.85);
+  color: #15803d;
+
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.dark .connection-chip {
+  background: rgba(34, 197, 94, 0.10);
+  color: #86efac;
+}
+
+.connection-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  box-shadow:
+    0 0 0 4px rgba(34, 197, 94, 0.10);
+}
+
+.hero-left h2 {
+  margin: 12px 0 7px;
+
+  color: #14532d;
+
+  font-size: 23px;
+  font-weight: 750;
+  letter-spacing: -0.4px;
+}
+
+.dark .hero-left h2 {
+  color: #f8fafc;
+}
+
+.hero-left p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.dark .hero-left p {
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   CONNECTION STATUS
+========================================================= */
+
+.connection-status-circle {
+  flex: 0 0 auto;
+
+  width: 112px;
+  height: 112px;
+
+  border-radius: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(220, 252, 231, 0.8) 70%,
+      rgba(187, 247, 208, 0.65) 100%
+    );
+
+  border: 7px solid rgba(255, 255, 255, 0.55);
+
+  box-shadow:
+    0 10px 24px rgba(34, 197, 94, 0.12);
+}
+
+.dark .connection-status-circle {
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(30, 41, 59, 0.95) 0%,
+      rgba(20, 83, 45, 0.55) 100%
+    );
+
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.connection-status-circle svg {
+  color: #16a34a;
+  margin-bottom: 3px;
+}
+
+.connection-status-circle h3 {
+  margin: 0;
+
+  color: #15803d;
+
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.dark .connection-status-circle h3 {
+  color: #86efac;
+}
+
+.connection-status-circle span {
+  margin-top: 2px;
+
+  color: #64748b;
+
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.dark .connection-status-circle span {
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   SECTION HEADERS
+========================================================= */
+
+.section-heading-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  margin-bottom: 14px;
+}
+
+.section-mini-label {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #16a34a;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.dark .section-mini-label {
+  color: #86efac;
+}
+
+.section-title {
+  margin: 0 0 14px;
+
+  color: #14532d;
+
+  font-size: 19px;
+  font-weight: 750;
+  letter-spacing: -0.3px;
+}
+
+.dark .section-title {
+  color: #f8fafc;
+}
+
+
+/* =========================================================
+   LIVE STATUS
+========================================================= */
+
+.live-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 5px 9px;
+
+  border-radius: 999px;
+
+  background: rgba(220, 252, 231, 0.75);
+  color: #15803d;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+}
+
+.live-status span {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+}
+
+.dark .live-status {
+  background: rgba(34, 197, 94, 0.10);
+  color: #86efac;
+}
+
+
+/* =========================================================
+   HEALTH METRICS
+========================================================= */
+
+.metrics-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 16px;
+
+  margin-bottom: 28px;
+}
+
+.metric-card {
+  position: relative;
+
+  min-width: 0;
+
+  padding: 18px;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.58);
+
+  border: 1px solid rgba(255, 255, 255, 0.62);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  box-shadow:
+    0 8px 24px rgba(15, 23, 42, 0.035);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 28px rgba(15, 23, 42, 0.07);
+}
+
+.dark .metric-card {
+  background: rgba(15, 23, 42, 0.50);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.metric-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 14px;
+}
+
+.metric-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+}
+
+.metric-icon.heart {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.metric-icon.spo2 {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.metric-icon.battery {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.dark .metric-icon.heart {
+  background: rgba(220, 38, 38, 0.12);
+}
+
+.dark .metric-icon.spo2 {
+  background: rgba(37, 99, 235, 0.12);
+}
+
+.dark .metric-icon.battery {
+  background: rgba(34, 197, 94, 0.10);
+}
+
+.metric-live,
+.metric-warning {
+  padding: 4px 7px;
+
+  border-radius: 999px;
+
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.metric-live {
+  background: #f0fdf4;
+  color: #16a34a;
+}
+
+.metric-warning {
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+.dark .metric-live {
+  background: rgba(34, 197, 94, 0.10);
+  color: #86efac;
+}
+
+.dark .metric-warning {
+  background: rgba(234, 88, 12, 0.12);
+  color: #fdba74;
+}
+
+.metric-label {
+  display: block;
+
+  color: #64748b;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.dark .metric-label {
+  color: #94a3b8;
+}
+
+.metric-card h3 {
+  margin: 5px 0 3px;
+
+  color: #14532d;
+
+  font-size: 25px;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+}
+
+.metric-card h3 small {
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.dark .metric-card h3 {
+  color: #f8fafc;
+}
+
+.metric-card p {
+  margin: 0;
+
+  color: #94a3b8;
+
+  font-size: 10px;
+}
+
+.dark .metric-card p {
+  color: #64748b;
+}
+
+
+/* =========================================================
+   SAFETY MONITORING
+========================================================= */
+
+.emergency-card {
+  margin-bottom: 28px;
+
+  padding: 22px;
+
+  border-radius: 21px;
+
+  background: rgba(255, 255, 255, 0.58);
+
+  border: 1px solid rgba(255, 255, 255, 0.65);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  box-shadow:
+    0 10px 28px rgba(34, 197, 94, 0.05);
+}
+
+.dark .emergency-card {
+  background: rgba(15, 23, 42, 0.50);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.emergency-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 18px;
+}
+
+.emergency-tag {
+  display: inline-flex;
+
+  padding: 5px 9px;
+
+  border-radius: 999px;
+
+  background: #f0fdf4;
+  color: #15803d;
+
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.dark .emergency-tag {
+  background: rgba(34, 197, 94, 0.10);
+  color: #86efac;
+}
+
+.emergency-header h3 {
+  margin: 9px 0 5px;
+
+  color: #14532d;
+
+  font-size: 19px;
+  font-weight: 750;
+}
+
+.dark .emergency-header h3 {
+  color: #f8fafc;
+}
+
+.emergency-header p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.dark .emergency-header p {
+  color: #94a3b8;
+}
+
+
+/* Safe badge */
+
+.safe-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 6px 10px;
+
+  border-radius: 999px;
+
+  background: #dcfce7;
+  color: #15803d;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+
+  white-space: nowrap;
+}
+
+.dark .safe-pill {
+  background: rgba(34, 197, 94, 0.10);
+  color: #86efac;
+}
+
+
+/* Safety boxes */
+
+.emergency-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
+
+  margin: 20px 0;
+}
+
+.emergency-box {
+  padding: 17px;
+
+  border-radius: 16px;
+
+  background: rgba(240, 253, 244, 0.65);
+
+  transition: transform 0.2s ease;
+}
+
+.dark .emergency-box {
+  background: rgba(30, 41, 59, 0.45);
+}
+
+.emergency-box:hover {
+  transform: translateY(-2px);
+}
+
+.emergency-box-icon {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  margin-bottom: 10px;
+}
+
+.emergency-box-icon.safe {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.emergency-box-icon.sos {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.dark .emergency-box-icon.safe {
+  background: rgba(34, 197, 94, 0.10);
+}
+
+.dark .emergency-box-icon.sos {
+  background: rgba(220, 38, 38, 0.10);
+}
+
+.emergency-box h4 {
+  margin: 0 0 4px;
+
+  color: #14532d;
+
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.dark .emergency-box h4 {
+  color: #f8fafc;
+}
+
+.emergency-box p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 10px;
+}
+
+.dark .emergency-box p {
+  color: #94a3b8;
+}
+
+
+/* Safety timeline */
+
+.emergency-timeline {
+  padding-top: 3px;
+}
+
+.emergency-timeline h4 {
+  margin: 0 0 6px;
+
+  color: #14532d;
+
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.dark .emergency-timeline h4 {
+  color: #f8fafc;
+}
+
+.timeline-event {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  padding: 10px 0;
+
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.timeline-event:last-child {
+  border-bottom: none;
+}
+
+.timeline-event svg {
+  flex: 0 0 auto;
+
+  color: #16a34a;
+  margin-top: 1px;
+}
+
+.timeline-event strong {
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: #14532d;
+
+  font-size: 10px;
+}
+
+.dark .timeline-event strong {
+  color: #e2e8f0;
+}
+
+.timeline-event span {
+  color: #64748b;
+
+  font-size: 9px;
+}
+
+.dark .timeline-event span {
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   GPS SECTION
+========================================================= */
+
+.gps-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 6px 10px;
+
+  border-radius: 999px;
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.gps-safe {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.gps-warning {
+  background: #ffedd5;
+  color: #c2410c;
+}
+
+.dark .gps-safe {
+  background: rgba(34, 197, 94, 0.10);
+  color: #86efac;
+}
+
+.dark .gps-warning {
+  background: rgba(234, 88, 12, 0.12);
+  color: #fdba74;
+}
+
+.gps-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.65fr)
+    minmax(260px, 0.85fr);
+
+  gap: 18px;
+
+  margin-bottom: 26px;
+}
+
+
+/* Map */
+
+.map-card {
+  min-width: 0;
+
+  padding: 20px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.58);
+
+  border: 1px solid rgba(255, 255, 255, 0.62);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.dark .map-card {
+  background: rgba(15, 23, 42, 0.50);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.map-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.map-header h3 {
+  margin: 0 0 4px;
+
+  color: #14532d;
+
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.dark .map-header h3 {
+  color: #f8fafc;
+}
+
+.map-header p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 10px;
+}
+
+.dark .map-header p {
+  color: #94a3b8;
+}
+
+.live-location-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 5px 8px;
+
+  border-radius: 999px;
+
+  background: #dcfce7;
+  color: #15803d;
+
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.live-location-badge span {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+}
+
+.dark .live-location-badge {
+  background: rgba(34, 197, 94, 0.10);
+  color: #86efac;
+}
+
+
+/* Map placeholder */
+
+.map-placeholder {
+  min-height: 245px;
+
+  margin-top: 16px;
+
+  border-radius: 15px;
+
+  border: 1px dashed rgba(34, 197, 94, 0.28);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(240, 253, 244, 0.72),
+      rgba(248, 255, 255, 0.55)
+    );
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.dark .map-placeholder {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(20, 83, 45, 0.12),
+      rgba(15, 23, 42, 0.30)
+    );
+
+  border-color: rgba(134, 239, 172, 0.16);
+}
+
+.map-placeholder svg {
+  color: #16a34a;
+
+  margin-bottom: 8px;
+}
+
+.map-placeholder h4 {
+  margin: 0 0 4px;
+
+  color: #166534;
+
+  font-size: 13px;
+}
+
+.dark .map-placeholder h4 {
+  color: #bbf7d0;
+}
+
+.map-placeholder p {
+  max-width: 260px;
+
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.dark .map-placeholder p {
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   LOCATION INFORMATION
+========================================================= */
+
+.location-column {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.location-card {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 15px;
+
+  min-width: 0;
+
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.58);
+
+  border: 1px solid rgba(255, 255, 255, 0.62);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.dark .location-card {
+  background: rgba(15, 23, 42, 0.50);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.location-icon {
+  flex: 0 0 auto;
+
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+}
+
+.location-icon.green {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.location-icon.blue {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.location-icon.orange {
+  background: #ffedd5;
+  color: #ea580c;
+}
+
+.dark .location-icon.green {
+  background: rgba(34, 197, 94, 0.10);
+}
+
+.dark .location-icon.blue {
+  background: rgba(37, 99, 235, 0.10);
+}
+
+.dark .location-icon.orange {
+  background: rgba(234, 88, 12, 0.10);
+}
+
+.location-card span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #94a3b8;
+
+  font-size: 9px;
+  font-weight: 650;
+}
+
+.location-card h4 {
+  margin: 0;
+
+  color: #14532d;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+.dark .location-card h4 {
+  color: #f1f5f9;
+}
+
+.inside-zone {
+  color: #16a34a !important;
+}
+
+.outside-zone {
+  color: #ea580c !important;
+}
+
+
+/* =========================================================
+   HEALTH TRENDS
+========================================================= */
+
+.trends-heading {
+  margin-top: 4px;
+  margin-bottom: 14px;
+}
+
+.trend-description {
+  margin: 4px 0 0;
+
+  color: #64748b;
+
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.dark .trend-description {
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   TREND GRID
+========================================================= */
+
+.health-trends-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+
+  margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   TREND CARD
+========================================================= */
+
+.trend-card {
+  min-width: 0;
+
+  padding: 20px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.58);
+
+  border: 1px solid rgba(255, 255, 255, 0.62);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  box-shadow:
+    0 8px 24px rgba(15, 23, 42, 0.035);
+}
+
+.dark .trend-card {
+  background: rgba(15, 23, 42, 0.50);
+
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+
+/* =========================================================
+   TREND CARD HEADER
+========================================================= */
+
+.trend-card-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 14px;
+
+  margin-bottom: 15px;
+}
+
+.trend-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  min-width: 0;
+}
+
+.trend-icon {
+  width: 38px;
+  height: 38px;
+
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+}
+
+.trend-icon.heart {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.trend-icon.spo2 {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.dark .trend-icon.heart {
+  background: rgba(220, 38, 38, 0.12);
+}
+
+.dark .trend-icon.spo2 {
+  background: rgba(37, 99, 235, 0.12);
+}
+
+.trend-title h3 {
+  margin: 0 0 2px;
+
+  color: #14532d;
+
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.dark .trend-title h3 {
+  color: #f8fafc;
+}
+
+.trend-title span {
+  color: #94a3b8;
+
+  font-size: 9px;
+}
+
+
+/* Current value */
+
+.trend-current {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+}
+
+.trend-current strong {
+  color: #14532d;
+
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.dark .trend-current strong {
+  color: #f8fafc;
+}
+
+.trend-current span {
+  color: #94a3b8;
+
+  font-size: 8px;
+}
+
+
+/* =========================================================
+   TREND SUMMARY
+========================================================= */
+
+.trend-summary {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 8px;
+
+  margin-bottom: 17px;
+}
+
+.trend-summary > div {
+  padding: 9px 11px;
+
+  border-radius: 11px;
+
+  background: rgba(240, 253, 244, 0.65);
+}
+
+.dark .trend-summary > div {
+  background: rgba(30, 41, 59, 0.42);
+}
+
+.trend-summary span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #94a3b8;
+
+  font-size: 8px;
+  font-weight: 650;
+}
+
+.trend-summary strong {
+  color: #166534;
+
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.dark .trend-summary strong {
+  color: #bbf7d0;
+}
+
+
+/* =========================================================
+   TREND CHART
+========================================================= */
+
+.trend-chart {
+  height: 180px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(6, minmax(0, 1fr));
+
+  gap: 8px;
+
+  align-items: stretch;
+
+  padding-top: 5px;
+}
+
+.trend-column {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.trend-value {
+  height: 18px;
+
+  color: #64748b;
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.dark .trend-value {
+  color: #cbd5e1;
+}
+
+.trend-bar-area {
+  flex: 1;
+
+  width: 100%;
+
+  max-width: 34px;
+
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: center;
+
+  margin: 5px 0 8px;
+
+  padding: 0 4px;
+
+  border-bottom:
+    1px solid rgba(148, 163, 184, 0.18);
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(148, 163, 184, 0.035),
+      transparent
+    );
+
+  border-radius: 7px 7px 0 0;
+}
+
+.trend-bar {
+  width: 100%;
+
+  min-height: 12px;
+
+  border-radius: 7px 7px 3px 3px;
+
+  transition:
+    height 0.35s ease,
+    transform 0.2s ease;
+}
+
+.trend-column:hover .trend-bar {
+  transform: scaleX(1.08);
+}
+
+
+/* Heart trend */
+
+.heart-bar {
+  background:
+    linear-gradient(
+      to top,
+      #f87171,
+      #ef4444
+    );
+
+  box-shadow:
+    0 4px 10px rgba(239, 68, 68, 0.13);
+}
+
+
+/* SpO2 trend */
+
+.spo2-bar {
+  background:
+    linear-gradient(
+      to top,
+      #60a5fa,
+      #3b82f6
+    );
+
+  box-shadow:
+    0 4px 10px rgba(59, 130, 246, 0.13);
+}
+
+.trend-column small {
+  color: #94a3b8;
+
+  font-size: 8px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   DARK TREND DETAILS
+========================================================= */
+
+.dark .trend-bar-area {
+  border-bottom-color:
+    rgba(148, 163, 184, 0.12);
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(148, 163, 184, 0.025),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   RESPONSIVE — LARGE TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .gps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .location-column {
+    display: grid;
+
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .wristband-body {
+    padding: 20px;
+  }
+
+  .health-trends-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .location-column {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — SMALL TABLET
+========================================================= */
+
+@media (max-width: 750px) {
+
+  .wristband-hero {
+    align-items: flex-start;
+  }
+
+  .metrics-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .emergency-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .wristband-body {
+    padding: 16px;
+  }
+
+  .page-heading h1 {
+    font-size: 26px;
+  }
+
+  .wristband-hero {
+    flex-direction: column;
+
+    padding: 20px;
+  }
+
+  .connection-status-circle {
+    align-self: flex-start;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .emergency-header {
+    flex-direction: column;
+  }
+
+  .section-heading-row {
+    align-items: flex-start;
+  }
+
+  .gps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .health-trends-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trend-card {
+    padding: 17px;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+  .wristband-body {
+    padding: 14px;
+  }
+
+  .page-heading h1 {
+    font-size: 23px;
+  }
+
+  .hero-left h2 {
+    font-size: 20px;
+  }
+
+  .map-card {
+    padding: 16px;
+  }
+
+  .map-placeholder {
+    min-height: 210px;
+  }
+
+  .trend-chart {
+    height: 165px;
+
+    gap: 5px;
+  }
+
+  .trend-card-header {
+    align-items: flex-start;
+  }
+
+  .trend-current strong {
+    font-size: 16px;
+  }
+
+}
