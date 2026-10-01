@@ -35,7 +35,7 @@ export default function Login() {
   // LOGIN
   // =========================================
 
-const handleLogin = (e) => {
+  const handleLogin = (e) => {
   e.preventDefault();
   navigate("/dashboard");
 };
@@ -270,30 +270,27 @@ const handleLogin = (e) => {
           <Pill size={19} />
         </div>
 
-        <div className="project-details-content">
+<div className="project-details-content">
+  <h4>NOTE:</h4>
 
-          <h4>
-            Explore Our Project
-          </h4>
+  <p>
+    Please do check out this link , it 
+    <br />
+    has the complete explanation of
+    <br />
+    this project.
+  </p>
 
-          <p>
-            Open our project webpage to see the
-            detailed explanation, prototype photos,
-            and current development stage.
-          </p>
-
-          <a
-            href={projectLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="project-details-link"
-          >
-            View Project
-            <ExternalLink size={13} />
-          </a>
-
-        </div>
-
+  <a
+    href={projectLink}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="project-details-link"
+  >
+    View Project
+    <ExternalLink size={13} />
+  </a>
+</div>
       </div>
 
       {/* =========================================

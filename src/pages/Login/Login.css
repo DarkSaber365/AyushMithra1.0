@@ -123,8 +123,8 @@
   right: 18%;
 }
 
-@keyframes float {
 
+@keyframes float {
   0%,
   100% {
     transform: translateY(0px);
@@ -133,7 +133,6 @@
   50% {
     transform: translateY(-14px);
   }
-
 }
 
 
@@ -206,9 +205,9 @@
 
 
 @keyframes cardFade {
-
   from {
     opacity: 0;
+
     transform:
       translateY(35px)
       scale(.95);
@@ -216,11 +215,11 @@
 
   to {
     opacity: 1;
+
     transform:
       translateY(0)
       scale(1);
   }
-
 }
 
 
@@ -264,7 +263,6 @@
 
 
 @keyframes logoPulse {
-
   0%,
   100% {
     transform: scale(1);
@@ -273,7 +271,6 @@
   50% {
     transform: scale(1.05);
   }
-
 }
 
 
@@ -340,7 +337,6 @@
 
 .input-group:hover,
 .input-group:focus-within {
-
   transform:
     translateY(-2px);
 
@@ -653,8 +649,8 @@
 .project-details-card {
   position: fixed;
 
+  top: 24px;
   right: 28px;
-  bottom: 28px;
 
   width: 285px;
 
@@ -678,57 +674,99 @@
     blur(20px);
 
   border:
-    1px solid rgba(255,255,255,.65);
+    1px solid rgba(16,185,129,.35);
 
   box-shadow:
     0 18px 45px
     rgba(0,0,0,.16);
 
-  z-index: 50;
-
-  animation:
-    projectCardIn .7s ease .3s both;
+  z-index: 9999;
 
   transition:
     transform .25s ease,
-    box-shadow .25s ease;
+    box-shadow .25s ease,
+    border-color .25s ease;
+
+  animation:
+    notificationShake 3.0s ease-in-out infinite;
 }
+
+
+/* ==========================================
+   NOTIFICATION HOVER
+========================================== */
 
 .project-details-card:hover {
   transform:
-    translateY(-5px);
+    translateY(-6px)
+    scale(1.02);
+
+  border-color:
+    rgba(16,185,129,.85);
 
   box-shadow:
-    0 22px 50px
-    rgba(0,0,0,.2);
+    0 24px 55px rgba(0,0,0,.18),
+    0 0 25px rgba(16,185,129,.9),
+    0 0 55px rgba(16,185,129,.55),
+    0 0 90px rgba(16,185,129,.3);
 }
 
 
-@keyframes projectCardIn {
+/* ==========================================
+   NOTIFICATION SHAKE
+========================================== */
 
-  from {
-    opacity: 0;
+@keyframes notificationShake {
 
+  0%,
+  70%,
+  100% {
     transform:
-      translateY(25px)
-      translateX(15px);
-  }
-
-  to {
-    opacity: 1;
-
-    transform:
-      translateY(0)
       translateX(0);
   }
 
+  72% {
+    transform:
+      translateX(-7px);
+  }
+
+  74% {
+    transform:
+      translateX(7px);
+  }
+
+  76% {
+    transform:
+      translateX(-6px);
+  }
+
+  78% {
+    transform:
+      translateX(6px);
+  }
+
+  80% {
+    transform:
+      translateX(-4px);
+  }
+
+  82% {
+    transform:
+      translateX(4px);
+  }
+
+  84% {
+    transform:
+      translateX(0);
+  }
 }
 
 
-/* Project icon */
+/* ==========================================
+   PROJECT ICON
+========================================== */
 
 .project-details-icon {
-
   min-width: 40px;
 
   width: 40px;
@@ -737,6 +775,7 @@
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
   border-radius: 11px;
@@ -749,7 +788,9 @@
 }
 
 
-/* Project text */
+/* ==========================================
+   PROJECT TEXT
+========================================== */
 
 .project-details-content {
   flex: 1;
@@ -758,64 +799,69 @@
 }
 
 .project-details-content h4 {
-
-  margin: 0 0 5px;
-
-  color:
-    #14532D;
+  margin:
+    0 0 6px;
 
   font-size:
-    14px;
+    13px;
 
   font-weight:
-    700;
+    800;
+
+  letter-spacing:
+    0.08em;
+
+  color:
+    #059669;
 }
 
 .project-details-content p {
-
-  margin: 0;
-
-  color:
-    #64748B;
+  margin:
+    0 0 10px;
 
   font-size:
-    11px;
+    12px;
 
   line-height:
     1.5;
+
+  color:
+    #475569;
 }
 
 
-/* Project link */
+/* ==========================================
+   PROJECT LINK
+========================================== */
 
 .project-details-link {
+  display:
+    inline-flex;
 
-  display: inline-flex;
+  align-items:
+    center;
 
-  align-items: center;
-
-  gap: 5px;
-
-  margin-top: 9px;
-
-  color:
-    #16A34A;
+  gap:
+    5px;
 
   font-size:
-    11.5px;
+    12px;
 
   font-weight:
     700;
+
+  color:
+    #059669;
 
   text-decoration:
     none;
 
   transition:
-    .2s ease;
+    color .2s ease,
+    transform .2s ease;
 }
 
 .project-details-link:hover {
-
   color:
     #14532D;
 
@@ -829,7 +875,6 @@
 ========================================== */
 
 .glow-circle {
-
   position: absolute;
 
   border-radius: 50%;
@@ -846,7 +891,6 @@
 }
 
 .glow1 {
-
   width: 220px;
   height: 220px;
 
@@ -858,7 +902,6 @@
 }
 
 .glow2 {
-
   width: 180px;
   height: 180px;
 
@@ -887,7 +930,6 @@
       translateY(-18px)
       translateX(12px);
   }
-
 }
 
 
@@ -896,7 +938,6 @@
 ========================================== */
 
 .heartbeat-line {
-
   position: absolute;
 
   bottom: 120px;
@@ -914,7 +955,6 @@
 }
 
 .heartbeat-line svg {
-
   width: 100%;
 
   height: 120px;
@@ -932,7 +972,6 @@
     transform:
       translateX(20px);
   }
-
 }
 
 
@@ -941,7 +980,6 @@
 ========================================== */
 
 .forgot-overlay {
-
   position: fixed;
 
   inset: 0;
@@ -974,12 +1012,10 @@
   to {
     opacity: 1;
   }
-
 }
 
 
 .forgot-modal {
-
   position: relative;
 
   width: 420px;
@@ -1022,7 +1058,6 @@
       translateY(0)
       scale(1);
   }
-
 }
 
 
@@ -1031,7 +1066,6 @@
 ========================================== */
 
 .close-modal {
-
   position: absolute;
 
   top: 16px;
@@ -1061,7 +1095,6 @@
 }
 
 .close-modal:hover {
-
   background:
     #16A34A;
 
@@ -1075,7 +1108,6 @@
 ========================================== */
 
 .forgot-modal h2 {
-
   color:
     #14532D;
 
@@ -1087,7 +1119,6 @@
 }
 
 .forgot-modal p {
-
   text-align:
     center;
 
@@ -1107,13 +1138,11 @@
 ========================================== */
 
 .success-message {
-
   text-align:
     center;
 }
 
 .success-icon {
-
   width:
     72px;
 
@@ -1146,7 +1175,6 @@
 }
 
 .success-message h3 {
-
   color:
     #16A34A;
 
@@ -1155,7 +1183,6 @@
 }
 
 .success-message p {
-
   margin-bottom:
     20px;
 }
@@ -1168,7 +1195,6 @@
 @media (max-width: 768px) {
 
   .login-card {
-
     width:
       92%;
 
@@ -1176,9 +1202,7 @@
       28px 24px;
   }
 
-
   .bubble {
-
     width:
       55px;
 
@@ -1188,7 +1212,6 @@
     font-size:
       22px;
   }
-
 
   .bubble1 {
     top: 60px;
@@ -1207,21 +1230,18 @@
     right: 15%;
   }
 
-
-  /* Project card moves below the login card
-     on smaller screens so it never overlaps */
-
   .project-details-card {
-
     position: fixed;
 
+    top: 16px;
+
     right: 16px;
-    bottom: 16px;
+
+    bottom: auto;
 
     width:
       min(285px, calc(100vw - 32px));
   }
-
 }
 
 
@@ -1232,7 +1252,6 @@
 @media (max-width: 500px) {
 
   .login-page {
-
     height: auto;
 
     min-height: 100vh;
@@ -1243,9 +1262,7 @@
     overflow-y: auto;
   }
 
-
   .login-card {
-
     width:
       calc(100% - 28px);
 
@@ -1253,21 +1270,20 @@
       28px 22px;
   }
 
-
   .logo-container h1 {
-
     font-size:
       30px;
   }
 
-
   .project-details-card {
+    top:
+      14px;
 
     right:
       14px;
 
     bottom:
-      14px;
+      auto;
 
     width:
       calc(100vw - 28px);
@@ -1276,18 +1292,13 @@
       300px;
   }
 
-
   .bubble {
-
     display:
       none;
   }
-
 
   .heartbeat-line {
-
     display:
       none;
   }
-
 }
